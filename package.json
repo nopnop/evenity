@@ -1,18 +1,13 @@
 {
   "name": "nova-evenity",
-  "description": "Unified event attachement and emit utility",
+  "description": "Unified event attachment and emit utility",
   "version": "0.0.0",
   "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
   "repository": {
     "type": "git",
     "url": "http://git.novadiscovery.net/tools/evenity.git"
   },
-  "licenses": [
-    {
-      "type": "Copyright Novadiscovery",
-      "url": "http://www.novadiscovery.com/"
-    }
-  ],
+  "license": "MIT",
   "main": "lib/evenity",
   "engines": {
       "node": ">= 0.12"
@@ -32,5 +27,5 @@
     "standard": "*"
   },
 
-  "keywords": ["event"]
+  "keywords": ["event", "emit", "attach", "unified"]
 }
