@@ -1,4 +1,15 @@
 # evenity
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![travis][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+[![downloads][downloads-image]][downloads-url]
+
+[travis-image]: https://img.shields.io/travis/nopnop/evenity.svg?style=flat&branch=master
+[travis-url]: https://travis-ci.org/nopnop/evenity
+[npm-image]: https://img.shields.io/npm/v/evenity.svg?style=flat
+[npm-url]: https://npmjs.org/package/evenity
+[downloads-image]: https://img.shields.io/npm/dm/evenity.svg?style=flat
+[downloads-url]: https://npmjs.org/package/evenity
 
 Unified event attachment utility
 
@@ -76,3 +87,10 @@ evenity.emit(el, 'myEvent', { foo: 'bar' })
 evenity.emit(el, new CustomEvent('myEvent', { detail: {}, bubbles: true, cancelable: true }))
 var canceled = !evenity.emit(el, new MouseEvent('click', { view: window, bubbles: true, cancelable: true }))
 ```
+
+---
+
+[The MIT License](./LICENSE)
+
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
