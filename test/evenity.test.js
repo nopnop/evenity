@@ -104,62 +104,60 @@ describe('evenity', function () {
     it('evenity.emit(obj, event) should emit a browser event (html element)', function () {
       var obj = document.createElement('div')
 
-      var event = new window.MouseEvent('click', {
+      var event = new window.CustomEvent('customevent', {
         'view': window,
         'bubbles': true,
         'cancelable': true
       })
 
-      evenity.on(obj, 'click', function (event) {
+      evenity.on(obj, 'customevent', function (event) {
         calls.push(event.type)
         event.preventDefault()
       })
 
       var canceled = !evenity.emit(obj, event)
       expect(calls.length).to.eql(1)
-      expect(calls[0]).to.eql('click')
+      expect(calls[0]).to.eql('customevent')
       expect(canceled).to.eql(true)
     })
-
-
 
     it('evenity.emit(obj, eventname, event) should emit a browser event (html element)', function () {
       var obj = document.createElement('div')
 
-      var event = new window.MouseEvent('click', {
+      var event = new window.CustomEvent('customevent', {
         'view': window,
         'bubbles': true,
         'cancelable': true
       })
 
-      evenity.on(obj, 'click', function (event) {
+      evenity.on(obj, 'customevent', function (event) {
         calls.push(event.type)
         event.preventDefault()
       })
 
-      var canceled = !evenity.emit(obj, 'click', event)
+      var canceled = !evenity.emit(obj, 'customevent', event)
       expect(calls.length).to.eql(1)
-      expect(calls[0]).to.eql('click')
+      expect(calls[0]).to.eql('customevent')
       expect(canceled).to.eql(true)
     })
 
     it('evenity.emit(obj, event) should emit a browser event (html element)', function () {
       var obj = document.createElement('div')
 
-      var event = new window.MouseEvent('click', {
+      var event = new window.CustomEvent('customevent', {
         'view': window,
         'bubbles': true,
         'cancelable': true
       })
 
-      evenity.on(obj, 'click', function (event) {
+      evenity.on(obj, 'customevent', function (event) {
         calls.push(event.type)
         event.preventDefault()
       })
 
       var canceled = !evenity.emit(obj, event)
       expect(calls.length).to.eql(1)
-      expect(calls[0]).to.eql('click')
+      expect(calls[0]).to.eql('customevent')
       expect(canceled).to.eql(true)
     })
   })
