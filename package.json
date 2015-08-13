@@ -29,5 +29,8 @@
     "emit",
     "attach",
     "unified"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  }
 }
