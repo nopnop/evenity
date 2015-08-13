@@ -1,6 +1,6 @@
 {
   "name": "nova-evenity",
-  "description": "Unified event attachement utility",
+  "description": "Unified event attachement and emit utility",
   "version": "0.0.0",
   "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
   "repository": {
@@ -17,32 +17,20 @@
   "engines": {
       "node": ">= 0.12"
   },
-  
+
   "scripts": {
     "test": "kawa test/evenity.test.js --phantom --reporter spec",
     "monitor": "kawa test/evenity.test.js --reporter spec --watch",
     "matrix": "kawa test/evenity.test.js --reporter matrix --watch",
     "standard": "./node_modules/.bin/standard"
   },
-  
-  "dependencies": {
-    
-    "browserify": "*",
-    "cssy": "*",
-    "htmly": "*"
-    
-  },
+
+  "dependencies": { },
   "devDependencies": {
-    
     "kawa": "*",
-    
     "expect.js": "*",
     "standard": "*"
   },
-  
-  "browserify": {
-    "transform": ["cssy", "htmly"]
-  },
-  
-  "keywords": []
+
+  "keywords": ["event"]
 }
