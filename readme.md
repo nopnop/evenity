@@ -1,10 +1,11 @@
 # evenity
 
-> Unified event attachement utility
+Unified event attachment utility
 
 ## Features
 
   - Attach event to any kind of event-enabled object
+  - Same event API for both node-like event emitter instance and html element
   - Return a closable object to detach event
 
 ## Getting Started
