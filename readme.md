@@ -57,10 +57,10 @@ eventOnObject.close()
 
 ## API
 
-### evenity.on({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler) => {Object} closable
+### evenity.on()
+`evenity.on({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler) => {Object} closable`
 
-Attach an event handler to an object. If `obj` is an `HTMLElement` the `handler` will
-receive an event object. Else, `handler` receive the emitted data.
+Attach an event handler to an object. If `obj` is an `HTMLElement` the `handler` will receive an event object. Else, `handler` receive the emitted data.
 
 The returned `closable` object has a `closable.close()` method to detach the handler:
 
@@ -69,16 +69,19 @@ var e = evenity.on(obj, 'eventname', function(event) { /* handle event.detail */
 e.close() // Detach event handler
 ```
 
-### evenity.once({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler)
+### evenity.once()
+`evenity.once({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler)`
 
 Same as `evenity.on()` but the handler is called only once, then the event is automatically
 detached
 
-### evenity.off({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler)
+### evenity.off()
+`evenity.off({EventEmitter|HTMLElement} obj, {String} eventname, {Function} handler)`
 
 Detach an event handler
 
-### evenity.emit({EventEmitter|HTMLElement} obj, {String|CustomEvent} eventnameOrCustomEvent, [{mixed|Event} data])
+### evenity.emit()
+`evenity.emit({EventEmitter|HTMLElement} obj, {String|CustomEvent} eventnameOrCustomEvent, [{mixed|Event} data])`
 
 Emit an event. If `obj` is an HTMLElement, then a `CustomEvent` is emitted with data as detail. If data is a `window.Event instance` then
 
