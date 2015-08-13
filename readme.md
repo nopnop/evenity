@@ -20,10 +20,10 @@ Unified event attachment utility
   - Return a closable object to detach event
 
 ## Getting Started
-Install the module with: `npm install --save nova-evenity`
+Install the module with: `npm install --save evenity`
 
 ```javascript
-var evenity = require('nova-evenity')
+var evenity = require('evenity')
 var EventEmitter = require('events').EventEmitter
 
 var el = document.createElement('div')
